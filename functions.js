@@ -89,13 +89,13 @@ console.log(getQuanOfUniqueCharacters("muahaha")); //
 { name: ‘somename’, age: 35 }
 and returns array of names of those people who are older than 65.
 E.g getPensionersName( [ {name: ‘Vasya’, age: 13}, {name: ‘Vasiliy’, age: 66} ] // -> [ ‘Vasiliy’ ]*/
-function getPensionersName(arrayOfObjects) {
-    var arrayOfPensioners = [];
-    for (var i = 0; i < arrayOfObjects.length; i++) {
-        if (arrayOfObjects[i].age > 65) {
-            arrayOfPensioners.push(arrayOfObjects[i].name);
+function getPensionersName(input) {
+    var result = [];
+    for (var i = 0; i < input.length; i++) {
+        if (input[i].age > 65) {
+            result.push(input[i].name);
         }
     }
-    return arrayOfPensioners;
+    return result;
 }
 console.log(getPensionersName([{name: 'Vasya', age: 13}, {name: 'Vasiliy', age: 66}, {name: 'Genadiy', age: 19}, {name: 'Genadiy Ivanovich', age: 70} ]));
